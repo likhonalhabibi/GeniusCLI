@@ -1,32 +1,27 @@
-# GeniusCLI
+# GeniusCLI Web UI
 
-A command-line interface to interact with Google's Gemini models.
-
-## Installation
-
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/likhonalhabibi/GeniusCLI.git
-    ```
-2.  Install the dependencies:
-    ```bash
-    npm install
-    ```
-3.  Link the CLI to your path:
-    ```bash
-    npm link
-    ```
+A web-based user interface for GeniusCLI, built with Next.js and shadcn/ui.
 
 ## Setup
 
-1.  Create a `.env` file in the root of the project.
-2.  Add your Gemini API key to the `.env` file:
+1.  Install the dependencies:
+    ```bash
+    pnpm install
+    ```
+2.  Create a `.env.local` file in the root of the project.
+3.  Add your Gemini API key to the `.env.local` file:
     ```
     GEMINI_API_KEY="YOUR_API_KEY"
     ```
 
-## Usage
+## Getting Started
+
+First, run the development server:
 
 ```bash
-genius-cli generate "Your prompt here"
+pnpm dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
