@@ -9,12 +9,10 @@ const gemini = createGeminiProvider({
   apiKey: process.env.GEMINI_API_KEY,
 });
 
-async function main() {
+export async function generate(prompt) {
   const result = await generateText({
     model: gemini('gemini-1.5-flash'),
-    prompt: 'Write a vegetarian lasagna recipe for 4 people.',
+    prompt: prompt,
   });
-  console.log(result.content[0].text);
+  return result.content[0].text;
 }
-
-main().catch(console.error);
