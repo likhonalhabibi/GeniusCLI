@@ -1,0 +1,14 @@
+
+> temp-app@0.1.0 dev /app
+> next dev
+
+   ▲ Next.js 16.0.0 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.2:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1038ms
+ ○ Compiling / ...
+ GET / 200 in 5.2s (compile: 4.7s, render: 437ms)
+ GET /? 200 in 125ms (compile: 5ms, render: 120ms)

@@ -1,5 +1,5 @@
 import { google } from '@/lib/gemini';
-import { StreamingTextResponse, streamText } from 'ai';
+import { streamText } from 'ai';
 
 export async function POST(req: Request) {
   const { messages } = await req.json();
@@ -9,5 +9,5 @@ export async function POST(req: Request) {
     messages,
   });
 
-  return new StreamingTextResponse(result.toAIStream());
+  return result.toAIStreamResponse();
 }

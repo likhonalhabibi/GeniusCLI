@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { TaskLogViewer } from '@/components/task-log-viewer';
 
 export default function Home() {
-  const { messages, input, handleInputChange, handleSubmit } = useChat({
+  const { messages, input, handleInputChange, handleSubmit, reload } = useChat({
     api: '/api/generate',
   });
 
@@ -21,7 +21,12 @@ export default function Home() {
           placeholder="Enter your prompt here..."
           className="bg-gray-800 text-white"
         />
-        <Button type="submit">Generate</Button>
+        <div className="flex gap-4">
+          <Button type="submit">Generate</Button>
+          <Button type="button" variant="outline" onClick={() => reload()}>
+            New Chat
+          </Button>
+        </div>
       </form>
     </div>
   );
