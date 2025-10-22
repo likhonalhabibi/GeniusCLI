@@ -1,6 +1,4 @@
-Here's the updated and comprehensive `AGENTS.md` document that integrates all the provided information about Hugging Face, AI SDK, MCP, AI Elements, and the GeniusCLI Web UI architecture:
 
-```markdown
 # Agent Architecture for GeniusCLI Web UI
 
 ## Overview
