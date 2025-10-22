@@ -1,9 +1,5 @@
-import { createGeminiProvider } from 'ai-sdk-provider-gemini-cli';
-import dotenv from 'dotenv';
+import { createGoogleGenerativeAI } from '@ai-sdk/google';
 
-dotenv.config();
-
-export const gemini = createGeminiProvider({
-  authType: 'api-key',
+export const google = createGoogleGenerativeAI({
   apiKey: process.env.GEMINI_API_KEY,
 });
