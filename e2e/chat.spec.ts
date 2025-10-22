@@ -8,12 +8,12 @@ test('New Chat button clears the chat history', async ({ page }) => {
   await page.click('button[type="submit"]');
 
   // Wait for the AI response to appear
-  await page.waitForSelector('div:has-text("AI:")');
+  await page.waitForSelector('span:has-text("AI")');
 
   // Click the "New Chat" button
   await page.click('button:has-text("New Chat")');
 
   // Verify that the chat history is cleared
-  const aiMessage = await page.$('div:has-text("AI:")');
+  const aiMessage = await page.$('span:has-text("AI")');
   expect(aiMessage).toBeNull();
 });
